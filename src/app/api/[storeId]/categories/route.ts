@@ -33,7 +33,7 @@ export async function POST(req: NextRequest, { params }: { params: { storeId: st
     const { name, billboardId } = body;
 
     if (!userId) return new NextResponse("Unauthorized", { status: 401 });
-    if (!name) return new NextResponse("name is required", { status: 400 });
+    if (!name) return new NextResponse("El nombre es requerido", { status: 400 });
     if (!billboardId) return new NextResponse("billboard id is required", { status: 400 });
     if (!storeId) return new NextResponse("Store id is required", { status: 400 });
 
