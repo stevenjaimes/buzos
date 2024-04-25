@@ -68,12 +68,12 @@ export default function BillboardForm({ initialData }: BillboardFormProps) {
       setLoading(true);
 
       if (initialData) {
-        await axios.patch(`/admin/api/${params.storeId}/billboards/${params.billboardId}`, values);
+        await axios.patch(`/api/${params.storeId}/billboards/${params.billboardId}`, values);
       } else {
-        await axios.post(`/admin/api/${params.storeId}/billboards`, values);
+        await axios.post(`/api/${params.storeId}/billboards`, values);
       }
 
-      router.push(`/admin/${params.storeId}/billboards`)
+      router.push(`/${params.storeId}/billboards`)
       router.refresh();
       toast.success(toastMesage);
     } catch (error: any) {
@@ -86,8 +86,8 @@ export default function BillboardForm({ initialData }: BillboardFormProps) {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/admin/api/${params.storeId}/billboards/${params.billboardId}`);
-      router.push(`/admin/${params.storeId}/billboards`);
+      await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`);
+      router.push(`/${params.storeId}/billboards`);
       router.refresh();
       toast.success('Billboard deleted.');
     } catch (error: any) {

@@ -133,7 +133,7 @@ export default function SettingsForm({ initialData }: SettingsFormProps) {
       <Separator />
       <ApiAlert
         title="NEXT_PUBLIC_API_URL"
-        description={`${origin}/admin/api/${params.storeId}`}
+        description={`${origin}/api/${params.storeId}`}
         variant="public"
       />
       <AlertModal
