@@ -73,7 +73,7 @@ export default function BillboardForm({ initialData }: BillboardFormProps) {
         await axios.post(`/admin/api/${params.storeId}/billboards`, values);
       }
 
-      router.push(`/${params.storeId}/billboards`)
+      router.push(`/admin/${params.storeId}/billboards`)
       router.refresh();
       toast.success(toastMesage);
     } catch (error: any) {
@@ -87,7 +87,7 @@ export default function BillboardForm({ initialData }: BillboardFormProps) {
     try {
       setLoading(true);
       await axios.delete(`/admin/api/${params.storeId}/billboards/${params.billboardId}`);
-      router.push(`/${params.storeId}/billboards`);
+      router.push(`/admin/${params.storeId}/billboards`);
       router.refresh();
       toast.success('Billboard deleted.');
     } catch (error: any) {
