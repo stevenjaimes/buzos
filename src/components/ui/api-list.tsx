@@ -13,7 +13,7 @@ export default function ApiList({ entityName, entityIdName }: ApiListProps) {
   const params = useParams();
   const origin = useOrigin();
 
-  const baseUrl = `${origin}/admin/api/${params.storeId}`;
+  const baseUrl = `${origin}/api/${params.storeId}`;
 
   return (
     <>
