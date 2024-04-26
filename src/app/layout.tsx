@@ -21,16 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>
-      
+      <body className={font.className}>      
         <Toaster
           position="top-center"
           richColors
-        />
-         <Navbar />
-        <h1>Store</h1>
-        {children}
-        
+        />         
+        {children}        
       </body>
     </html>
   );
