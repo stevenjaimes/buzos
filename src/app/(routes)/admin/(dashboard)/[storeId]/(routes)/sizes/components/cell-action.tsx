@@ -42,7 +42,7 @@ export default function CellAction({ data }: CellActionProps) {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/sizes/${data.id}`);
+      await axios.delete(`/admin/api/${params.storeId}/sizes/${data.id}`);
       router.refresh();
       toast.success('Size deleted.');
     } catch (error: any) {

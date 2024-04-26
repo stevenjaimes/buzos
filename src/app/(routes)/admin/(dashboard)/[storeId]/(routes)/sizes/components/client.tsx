@@ -28,7 +28,7 @@ export default function SizesClient({ data }: SizesClientProps) {
           description='Manage sizes for your store'
         />
         <Button
-          onClick={() => router.push(`/${params.storeId}/sizes/new`)}
+          onClick={() => router.push(`/admin/${params.storeId}/sizes/new`)}
         >
           <Plus className='h-4 w-4 mr-2' />
           Add new

@@ -68,12 +68,12 @@ export default function SizeForm({ initialData }: SizeFormProps) {
       setLoading(true);
 
       if (initialData) {
-        await axios.patch(`/api/${params.storeId}/sizes/${params.sizeId}`, values);
+        await axios.patch(`/admin/api/${params.storeId}/sizes/${params.sizeId}`, values);
       } else {
-        await axios.post(`/api/${params.storeId}/sizes`, values);
+        await axios.post(`/admin/api/${params.storeId}/sizes`, values);
       }
 
-      router.push(`/${params.storeId}/sizes`)
+      router.push(`/admin/${params.storeId}/sizes`)
       router.refresh();
       toast.success(toastMesage);
     } catch (error: any) {
@@ -86,8 +86,8 @@ export default function SizeForm({ initialData }: SizeFormProps) {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/sizes/${params.sizeId}`);
-      router.push(`/${params.storeId}/sizes`);
+      await axios.delete(`/admin/api/${params.storeId}/sizes/${params.sizeId}`);
+      router.push(`/admin/${params.storeId}/sizes`);
       router.refresh();
       toast.success('Size deleted.');
     } catch (error: any) {
