@@ -8,8 +8,8 @@ import { X } from "lucide-react";
 
 import { Product } from "@/types";
 
-import IconButton from "@/components/ui/icon-button";
-import Currency from "@/components/ui/currency";
+import IconButton from "@/componentsf/ui/icon-button";
+import Currency from "@/componentsf/ui/currency";
 
 interface CartItemProps {
   data: Product

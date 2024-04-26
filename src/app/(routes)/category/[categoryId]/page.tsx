@@ -1,12 +1,12 @@
-import Container from "@/components/ui/container";
+import Container from "@/componentsf/ui/container";
 
-import NoResults from "@/components/ui/no-results";
+import NoResults from "@/componentsf/ui/no-results";
 import getCategory from "@/actions/get-category";
 import getColors from "@/actions/get-colors";
 import getProducts from "@/actions/get-products";
 import getSizes from "@/actions/get-sizes";
-import Billboard from "@/components/billboard";
-import ProductCard from "@/components/ui/product-card";
+import Billboard from "@/componentsf/billboard";
+import ProductCard from "@/componentsf/ui/product-card";
 
 import Filter from "./components/filter";
 import MobileFilters from "./components/mobile-filters";

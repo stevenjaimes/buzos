@@ -8,8 +8,8 @@ import { Plus, X } from "lucide-react";
 
 import { Dialog } from "@headlessui/react";
 
-import Button from "@/components/ui/button";
-import IconButton from "@/components/ui/icon-button";
+import Button from "@/componentsf/ui/button";
+import IconButton from "@/componentsf/ui/icon-button";
 import Filter from "./filter";
 
 interface MobileFiltersProps {

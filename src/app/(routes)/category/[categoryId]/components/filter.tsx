@@ -8,7 +8,7 @@ import { Color, Size } from "@/types"
 
 import { useSearchParams, useRouter } from "next/navigation"
 
-import Button from "@/components/ui/button"
+import Button from "@/componentsf/ui/button"
 
 interface FilterProps {
   valueKey: string

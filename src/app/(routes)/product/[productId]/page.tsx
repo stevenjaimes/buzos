@@ -1,10 +1,10 @@
-import Container from "@/components/ui/container";
+import Container from "@/componentsf/ui/container";
 
 import getProduct from "@/actions/get-product";
 import getProducts from "@/actions/get-products"
-import ProductList from "@/components/product-list";
-import Gallery from "@/components/gallery";
-import Info from "@/components/info";
+import ProductList from "@/componentsf/product-list";
+import Gallery from "@/componentsf/gallery";
+import Info from "@/componentsf/info";
 
 interface ProductPageProps {
   params: {

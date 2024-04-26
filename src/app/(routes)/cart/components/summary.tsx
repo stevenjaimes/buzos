@@ -8,8 +8,8 @@ import axios from "axios"
 
 import { useSearchParams } from "next/navigation"
 
-import Button from "@/components/ui/button"
-import Currency from "@/components/ui/currency"
+import Button from "@/componentsf/ui/button"
+import Currency from "@/componentsf/ui/currency"
 import useCart from "@/hooks/use-cart"
 
 
