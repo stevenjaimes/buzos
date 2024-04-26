@@ -39,8 +39,7 @@ export default function AdminLayout({
               richColors
             />
             {children}
-          </ThemeProvider>
-          <Footer />
+          </ThemeProvider>         
         </body>
       </html>
     </ClerkProvider >
