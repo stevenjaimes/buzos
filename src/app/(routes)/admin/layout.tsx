@@ -9,6 +9,7 @@ import { ThemeProvider } from '@/providers/theme-provider'
 import { Toaster } from "@/components/ui/sonner"
 
 import "./globals.css";
+import Footer from "@/componentsf/footer";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -39,6 +40,7 @@ export default function AdminLayout({
             />
             {children}
           </ThemeProvider>
+          <Footer />
         </body>
       </html>
     </ClerkProvider >
