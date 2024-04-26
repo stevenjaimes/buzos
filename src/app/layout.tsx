@@ -25,8 +25,10 @@ export default function RootLayout({
         <Toaster
           position="top-center"
           richColors
-        />         
-        {children}        
+        />
+        <Navbar />
+        {children}
+        <Footer />        
       </body>
     </html>
   );
