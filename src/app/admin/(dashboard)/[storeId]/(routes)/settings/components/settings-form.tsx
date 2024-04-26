@@ -71,7 +71,7 @@ export default function SettingsForm({ initialData }: SettingsFormProps) {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/stores/${params.storeId}`);
+      await axios.delete(`/admin/api/stores/${params.storeId}`);
       router.refresh();
       router.push('/');
       toast.success('Store deleted.');

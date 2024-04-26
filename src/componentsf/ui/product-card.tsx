@@ -13,8 +13,8 @@ import { Expand, ShoppingCart } from "lucide-react"
 
 import Image from "next/image"
 
-import Currency from "@/components/ui/currency"
-import IconButton from "@/components/ui/icon-button"
+import Currency from "@/componentsf/ui/currency"
+import IconButton from "@/componentsf/ui/icon-button"
 
 interface ProductCardProps {
   data: Product

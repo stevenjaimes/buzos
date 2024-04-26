@@ -76,12 +76,12 @@ export default function CategoryForm({ initialData, billboards }: CategoryFormPr
       setLoading(true);
 
       if (initialData) {
-        await axios.patch(`/api/${params.storeId}/categories/${params.categoryId}`, values);
+        await axios.patch(`/admin/api/${params.storeId}/categories/${params.categoryId}`, values);
       } else {
-        await axios.post(`/api/${params.storeId}/categories`, values);
+        await axios.post(`/admin/api/${params.storeId}/categories`, values);
       }
 
-      router.push(`/${params.storeId}/categories`)
+      router.push(`/admin/${params.storeId}/categories`)
       router.refresh();
       toast.success(toastMesage);
     } catch (error: any) {
@@ -94,8 +94,8 @@ export default function CategoryForm({ initialData, billboards }: CategoryFormPr
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/categories/${params.categoryId}`);
-      router.push(`/${params.storeId}/categories`);
+      await axios.delete(`/admin/api/${params.storeId}/categories/${params.categoryId}`);
+      router.push(`/admin/${params.storeId}/categories`);
       router.refresh();
       toast.success('Billboard deleted.');
     } catch (error: any) {
