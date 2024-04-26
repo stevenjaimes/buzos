@@ -58,7 +58,7 @@ export default function SettingsForm({ initialData }: SettingsFormProps) {
   const onSubmit = async (values: SettingsFormValues) => {
     try {
       setLoading(true);
-      await axios.patch(`/api/stores/${params.storeId}`, values);
+      await axios.patch(`/admin/api/stores/${params.storeId}`, values);
       router.refresh();
       toast.success('Store updated.');
     } catch (error: any) {
@@ -133,7 +133,7 @@ export default function SettingsForm({ initialData }: SettingsFormProps) {
       <Separator />
       <ApiAlert
         title="NEXT_PUBLIC_API_URL"
-        description={`${origin}/api/${params.storeId}`}
+        description={`${origin}/admin/api/${params.storeId}`}
         variant="public"
       />
       <AlertModal

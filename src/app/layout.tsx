@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs';
 import { ModalProvider } from "@/providers/modal-provider";
 import { ThemeProvider } from '@/providers/theme-provider'
+import { useRouter } from 'next/router';
 
 import { Toaster } from "@/components/ui/sonner"
 
@@ -22,6 +23,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const router = useRouter();
+  const isNotFound = router.query.notFound === 'true';
+
+  if (isNotFound) {
+    router.push('/admin');
+    
+  }
+
   return (
     <ClerkProvider>
       <html lang="en">
