@@ -73,7 +73,7 @@ export default function SettingsForm({ initialData }: SettingsFormProps) {
       setLoading(true);
       await axios.delete(`/admin/api/stores/${params.storeId}`);
       router.refresh();
-      router.push('/');
+      router.push('/admin');
       toast.success('Store deleted.');
     } catch (error: any) {
       toast.error('Make sure you removed all products and categories first.');

@@ -42,7 +42,7 @@ export default function CellAction({ data }: CellActionProps) {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/colors/${data.id}`);
+      await axios.delete(`/admin/api/${params.storeId}/colors/${data.id}`);
       router.refresh();
       toast.success('Color deleted.');
     } catch (error: any) {

@@ -70,12 +70,12 @@ export default function ColorForm({ initialData }: ColorFormProps) {
       setLoading(true);
 
       if (initialData) {
-        await axios.patch(`/api/${params.storeId}/colors/${params.colorId}`, values);
+        await axios.patch(`/admin/api/${params.storeId}/colors/${params.colorId}`, values);
       } else {
-        await axios.post(`/api/${params.storeId}/colors`, values);
+        await axios.post(`/admin/api/${params.storeId}/colors`, values);
       }
 
-      router.push(`/${params.storeId}/colors`)
+      router.push(`/admin/${params.storeId}/colors`)
       router.refresh();
       toast.success(toastMesage);
     } catch (error: any) {
@@ -88,8 +88,8 @@ export default function ColorForm({ initialData }: ColorFormProps) {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/colors/${params.colorId}`);
-      router.push(`/${params.storeId}/colors`);
+      await axios.delete(`/admin/api/${params.storeId}/colors/${params.colorId}`);
+      router.push(`/admin/${params.storeId}/colors`);
       router.refresh();
       toast.success('Color deleted.');
     } catch (error: any) {

@@ -102,12 +102,12 @@ export default function ProductForm({
       setLoading(true);
 
       if (initialData) {
-        await axios.patch(`/api/${params.storeId}/products/${params.productId}`, values);
+        await axios.patch(`/admin/api/${params.storeId}/products/${params.productId}`, values);
       } else {
-        await axios.post(`/api/${params.storeId}/products`, values);
+        await axios.post(`/admin/api/${params.storeId}/products`, values);
       }
 
-      router.push(`/${params.storeId}/products`)
+      router.push(`/admin/${params.storeId}/products`)
       router.refresh();
       toast.success(toastMesage);
     } catch (error: any) {
@@ -120,8 +120,8 @@ export default function ProductForm({
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/products/${params.productId}`);
-      router.push(`/${params.storeId}/products`);
+      await axios.delete(`/admin/api/${params.storeId}/products/${params.productId}`);
+      router.push(`/admin/${params.storeId}/products`);
       router.refresh();
       toast.success('Product deleted.');
     } catch (error: any) {
