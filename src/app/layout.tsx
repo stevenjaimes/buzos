@@ -27,7 +27,7 @@ export default function RootLayout({
           position="top-center"
           richColors
         />
-
+        <h1>Store</h1>
         {children}
         
       </body>
