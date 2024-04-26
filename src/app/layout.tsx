@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-import { ClerkProvider } from '@clerk/nextjs';
-import { ModalProvider } from "@/providers/modal-provider";
-import { ThemeProvider } from '@/providers/theme-provider'
-
-
-import { Toaster } from "@/components/ui/sonner"
-
+import { Rubik } from "next/font/google";
 import "./globals.css";
 
+import Footer from "@/componentsf/footer";
+import Navbar from "@/componentsf/navbar";
+import ModalProvider from "@/providersf/modal-provider";
+import { Toaster } from "@/components/ui/sonner"
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard",
-  description: "Admin panel for an E-Commerce store built with Nextjs and TailwindCSS",
+  title: "Store",
+  description: "Store",
 };
 
 export default function RootLayout({
@@ -23,26 +19,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
- 
-
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-          >
-            <ModalProvider />
-            <Toaster
-              richColors
-            />
-            {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider >
+    <html lang="en">
+      <body className={font.className}>
+        <ModalProvider />
+        <Toaster
+          position="top-center"
+          richColors
+        />
+        <Navbar />
+        {children}
+        
+      </body>
+    </html>
   );
 }

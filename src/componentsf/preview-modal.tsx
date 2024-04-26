@@ -2,9 +2,9 @@
 
 import usePreviewModal from "@/hooks/use-preview-modal"
 
-import Modal from "@/components/ui/modal";
-import Gallery from "@/components/gallery";
-import Info from "@/components/info";
+import Modal from "@/componentsf/ui/modal";
+import Gallery from "@/componentsf/gallery";
+import Info from "@/componentsf/info";
 
 export default function PreviewModal() {
   const previewModal = usePreviewModal();

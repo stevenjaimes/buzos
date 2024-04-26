@@ -8,7 +8,7 @@ import useCart from "@/hooks/use-cart";
 
 import { ShoppingBag } from "lucide-react";
 
-import Button from "@/components/ui/button";
+import Button from "@/componentsf/ui/button";
 
 export default function NavbarActions() {
   const router = useRouter();
