@@ -11,7 +11,7 @@ export default async function SetUpLayout({
   const { userId } = auth();
 
   if (!userId) {
-    redirect("/sign-in")
+    redirect("/admin/sign-in")
   };
 
   const store = await prisma.store.findFirst({
