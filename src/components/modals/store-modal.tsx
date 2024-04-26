@@ -43,12 +43,12 @@ export function StoreModal() {
     try {
       setLoading(true);
 
-      const response = await axios.post('/api/stores', values);
+      const response = await axios.post('/admin/api/stores', values);
       console.log(response.data);
 
       window.location.assign(`/${response.data.id}`);
     } catch (error) {
-      toast.error('Something went wrong');
+      toast.error('Algo salio mal en la creación de la tienda');
     } finally {
       setLoading(false);
     }
